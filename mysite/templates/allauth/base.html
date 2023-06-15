@@ -72,20 +72,50 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Dropdown
+                    Account
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li><a class="dropdown-item" href="#">Account</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Another action</a>
+                      <a href="" class="dropdown-item">My Profile</a>
+                      <a href="{% url 'account_logout' %}" class="dropdown-item"
+                        >Logout</a
+                      >
                     </li>
+                    {% else %}
+                    <li>
+                      <a href="{% url 'account_signup' %}" class="dropdown-item"
+                        >Register</a
+                      >
+                      <a href="{% url 'account_login' %}" class="dropdown-item"
+                        >Login</a
+                      >
+                    </li>
+                    {% endif %}
                     <li>
                       <hr class="dropdown-divider" />
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Another action</a>
                     </li>
                   </ul>
+                </li>
+
+                <li class="list-inline-item dropdown">
+                  <a
+                    class="text-black nav-link"
+                    href="#"
+                    id="user-options"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                  </a>
+                  <div
+                    class="dropdown-menu border-0"
+                    aria-labelledby="user-options"
+                  ></div>
                 </li>
               </ul>
               <form class="d-flex mt-3" role="search" method="GET" action="">
