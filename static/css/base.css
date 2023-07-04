@@ -1,10 +1,37 @@
-body {
-    padding-top: 70px;
+html {
+    height: 100%;
+    /* background-color: blue; */
 }
 
-html,
 body {
-    height: 100%;
-    padding-top: 70px;
-    background-color: blue;
+    background: url('/media/octo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100% - 164px);
+    font-family: 'Exo 2', sans-serif;
+    color: white
+}
+
+#maint {
+    backdrop-filter: blur(8.99px);
+    background: rgba(black, 0.66);
+    color: white;
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
 }
