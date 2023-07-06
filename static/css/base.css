@@ -11,6 +11,10 @@ body {
     color: white
 }
 
+.header-container {
+    padding-top: 164px;
+}
+
 #maint {
     backdrop-filter: blur(8.99px);
     background: rgba(black, 0.66);
@@ -34,4 +38,17 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+
+.btn {
+    background-color: #6e2222;
+    color: #fff;
+    transition: all .7s;
+    border-color: #f4e2e2;
+}
+
+.btn:hover {
+    color: #6e2222;
+    background-color: #f4e2e2;
+    border-color: #6e2222;
 }
